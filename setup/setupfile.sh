@@ -41,3 +41,10 @@ $S status vsftpd
 $S start vsftpd
 $S enable vsftpd
 $S status vsftpd
+
+#Openldap
+$Y openldap openldap-clients openldap-devel openldap-servers
+$S status slapd
+$S start slapd
+$S status slapd
+cp -a /usr/share/openldap-servers/DB_CONFIG.example /var/lib/ldap/DB_CONFIG
